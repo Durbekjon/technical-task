@@ -1,4 +1,4 @@
-import { ApiProperty } from "@nestjs/swagger";
+import { ApiProperty } from '@nestjs/swagger';
 
 export interface IUser {
   id: string;
@@ -21,4 +21,10 @@ export class UserDto {
     description: 'The email address of the registered user',
   })
   email: string;
+
+  @ApiProperty({
+    example: 'false',
+    description: 'Is user admin',
+  })
+  isAdmin: boolean;
 }
