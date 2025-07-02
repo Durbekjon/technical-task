@@ -30,14 +30,14 @@ export class AuthRepository {
   }
 
   async findVerificationCode(otp: string) {
-    return this.prisma.verificationCodes.findFirst({
+    return this.prisma.verificationCode.findFirst({
       where: { otp },
       include: { user: true },
     });
   }
 
   async deleteVerificationCode(id: string) {
-    return this.prisma.verificationCodes.delete({ where: { id } });
+    return this.prisma.verificationCode.delete({ where: { id } });
   }
 
   async updateUserPassword(userId: string, password: string) {

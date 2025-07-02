@@ -110,7 +110,7 @@ export class AuthService {
 
     const otp = this.utilsService.generateOtp();
     await Promise.all([
-      this.prisma.verificationCodes.create({
+      this.prisma.verificationCode.create({
         data: {
           user: { connect: { id: user.id } },
           otp: String(otp),
