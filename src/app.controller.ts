@@ -5,7 +5,7 @@ export class AppController {
   @Get()
   get() {
     return `Hi there.
-        swagger docs: api/docs
+        swagger docs: https://technical-task-l8ci.onrender.com/api/docs
         admin email: admin@test.com
         password: TQuaV3Q9wMV1EpW
         `;
