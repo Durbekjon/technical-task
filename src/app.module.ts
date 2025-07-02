@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from '@auth/auth.module';
 import { AdminModule } from '@admin/admin.module';
 import { TasksModule } from '@tasks/tasks.module';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -11,5 +12,6 @@ import { TasksModule } from '@tasks/tasks.module';
     AdminModule,
     TasksModule,
   ],
+  controllers: [AppController],
 })
 export class AppModule {}
