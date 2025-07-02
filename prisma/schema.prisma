@@ -8,15 +8,27 @@ datasource db {
 }
 
 model User {
-  id         String    @id @default(uuid())
-  fullName   String    @map("full_name")
-  email      String    @unique
-  password   String
-  createdAt  DateTime  @default(now()) @map("created_at")
-  updatedAt  DateTime  @updatedAt @map("updated_at")
-  tasks      Task[]
+  id                  String                @id @default(uuid())
+  fullName            String                @map("full_name")
+  email               String                @unique
+  password            String
+  createdAt           DateTime              @default(now()) @map("created_at")
+  updatedAt           DateTime              @updatedAt @map("updated_at")
+  isAdmin             Boolean               @default(false)
+  tasks               Task[]
+  verificationCodes   VerificationCode[]
 
   @@map("users")
+}
+
+model VerificationCode {
+  id         String   @id @default(uuid())
+  otp        String
+  createdAt  DateTime @default(now()) @map("created_at")
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("verification_codes")
 }
 
 model Task {

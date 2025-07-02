@@ -15,8 +15,13 @@
       "@admin/*": ["./src/modules/admin/*"],
       "@tasks/*": ["./src/modules/tasks/*"],
       "@modules/*": ["./src/modules/*"],
-      "@prisma/*": ["./src/common/prisma/*"],
-      "@common/*": ["./src/common/*"]
+      "@prisma/*": ["./src/core/prisma/*"],
+      "@utils/*": ["./src/core/utils/*"],
+      "@email/*": ["./src/core/email/*"],
+      "@exceptions/*": ["./src/core/exceptions/*"],
+      "@decorators/*": ["./src/core/decorators/*"],
+      "@jwt/*": ["./src/core/jwt/*"],
+      "@core*": ["./src/core/*"]
     },
     "incremental": true,
     "skipLibCheck": true,
