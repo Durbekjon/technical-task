@@ -4,4 +4,7 @@ export const HTTP_MESSAGES = {
     USER_EXIST: 'User already exists with this email',
     INVALID_PASSWORD: 'Invalid password',
   },
+  ADMIN: {
+    ADMINS_ONLY: 'Access denied: Admins only',
+  },
 };

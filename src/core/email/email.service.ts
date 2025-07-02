@@ -19,7 +19,7 @@ export class EmailService {
   }
 
   sendForgetPasswordOtp = async (email: string, otp: number) => {
-    const OTP_VALID_DURATION_MINUTES = this.configService.get<string>(
+    const OTP_VALID_DURATION_MINUTES = await this.configService.get<string>(
       'OTP_VALID_DURATION_MINUTES',
     );
     return this.transporter.sendMail({

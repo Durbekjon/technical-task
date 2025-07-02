@@ -20,6 +20,7 @@
       "@email/*": ["./src/core/email/*"],
       "@exceptions/*": ["./src/core/exceptions/*"],
       "@decorators/*": ["./src/core/decorators/*"],
+      "@guards/*": ["./src/core/guards/*"],
       "@jwt/*": ["./src/core/jwt/*"],
       "@core*": ["./src/core/*"]
     },

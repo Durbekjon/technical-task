@@ -15,7 +15,6 @@ import { TokensService } from './auth-token.service';
   providers: [
     AuthService,
     AuthRepository,
-    PrismaService,
     JwtStrategy,
     TokensService,
   ],

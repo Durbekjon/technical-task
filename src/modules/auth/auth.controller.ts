@@ -4,9 +4,7 @@ import {
   Post,
   Put,
   Body,
-  UnauthorizedException,
   UseGuards,
-  Request,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { AuthGuard } from '@nestjs/passport';
